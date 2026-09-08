@@ -1,0 +1,178 @@
+﻿<Application x:Class="HospitalDesktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             >
+  <Application.Resources>
+    <!-- Brand from 1.0.0: cyan #009CDE / #008fe8, doctor burgundy #630000, cream cards -->
+    <Color x:Key="BrandCyan">#FF009CDE</Color>
+    <Color x:Key="BrandCyanDeep">#FF008FE8</Color>
+    <Color x:Key="DoctorBurgundy">#FF630000</Color>
+    <Color x:Key="DoctorBurgundySoft">#FF810000</Color>
+    <Color x:Key="Cream">#FFFDF8E4</Color>
+    <Color x:Key="SkyLabel">#FF87CEEB</Color>
+    <SolidColorBrush x:Key="BrandCyanBrush" Color="{StaticResource BrandCyan}"/>
+    <SolidColorBrush x:Key="BrandCyanDeepBrush" Color="{StaticResource BrandCyanDeep}"/>
+    <SolidColorBrush x:Key="DoctorBurgundyBrush" Color="{StaticResource DoctorBurgundy}"/>
+    <SolidColorBrush x:Key="DoctorBurgundySoftBrush" Color="{StaticResource DoctorBurgundySoft}"/>
+    <SolidColorBrush x:Key="CreamBrush" Color="{StaticResource Cream}"/>
+    <SolidColorBrush x:Key="SkyLabelBrush" Color="{StaticResource SkyLabel}"/>
+    <SolidColorBrush x:Key="InkBrush" Color="#FF0F172A"/>
+    <SolidColorBrush x:Key="MutedBrush" Color="#FF64748B"/>
+    <SolidColorBrush x:Key="LineBrush" Color="#FFCBD5E1"/>
+    <SolidColorBrush x:Key="PaperBrush" Color="#FFF1F5F9"/>
+
+    <Style TargetType="Window">
+      <Setter Property="FontFamily" Value="Segoe UI"/>
+      <Setter Property="FontSize" Value="14"/>
+      <Setter Property="Foreground" Value="{StaticResource InkBrush}"/>
+    </Style>
+
+    <!-- Manager / secretary cyan sidebar (1.0.0 GlavniMeniStyle light) -->
+    <Style x:Key="CyanSideBar" TargetType="Border">
+      <Setter Property="Background" Value="{StaticResource BrandCyanDeepBrush}"/>
+    </Style>
+
+    <Style x:Key="CyanNavButton" TargetType="Button">
+      <Setter Property="Background" Value="{StaticResource BrandCyanBrush}"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="BorderBrush" Value="#0033CC"/>
+      <Setter Property="BorderThickness" Value="2"/>
+      <Setter Property="Padding" Value="10,8"/>
+      <Setter Property="Margin" Value="8,3"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="HorizontalContentAlignment" Value="Left"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="6" Padding="{TemplateBinding Padding}">
+              <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="Center"/>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Style.Triggers>
+        <Trigger Property="IsMouseOver" Value="True">
+          <Setter Property="Background" Value="#00A6F0"/>
+        </Trigger>
+      </Style.Triggers>
+    </Style>
+
+    <!-- Doctor cream menu cards on burgundy -->
+    <Style x:Key="CreamMenuButton" TargetType="Button">
+      <Setter Property="Background" Value="{StaticResource CreamBrush}"/>
+      <Setter Property="Foreground" Value="Black"/>
+      <Setter Property="FontWeight" Value="Bold"/>
+      <Setter Property="FontSize" Value="15"/>
+      <Setter Property="Height" Value="64"/>
+      <Setter Property="Margin" Value="0,8"/>
+      <Setter Property="BorderThickness" Value="0"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="HorizontalContentAlignment" Value="Left"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}" CornerRadius="18"
+                    Padding="12,8">
+              <Border.Effect>
+                <DropShadowEffect BlurRadius="8" ShadowDepth="2" Opacity="0.25"/>
+              </Border.Effect>
+              <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+      <Style.Triggers>
+        <Trigger Property="IsMouseOver" Value="True">
+          <Setter Property="Background" Value="#FFFCF0D0"/>
+        </Trigger>
+      </Style.Triggers>
+    </Style>
+
+    <Style x:Key="PrimaryButton" TargetType="Button">
+      <Setter Property="Background" Value="White"/>
+      <Setter Property="Foreground" Value="Black"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+      <Setter Property="Padding" Value="16,10"/>
+      <Setter Property="BorderBrush" Value="Black"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="10" Padding="{TemplateBinding Padding}">
+              <Border.Effect>
+                <DropShadowEffect BlurRadius="10" ShadowDepth="3" Opacity="0.35"/>
+              </Border.Effect>
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style x:Key="GhostButton" TargetType="Button">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="Foreground" Value="White"/>
+      <Setter Property="Padding" Value="12,7"/>
+      <Setter Property="BorderBrush" Value="#66FFFFFF"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="Cursor" Value="Hand"/>
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="8" Padding="{TemplateBinding Padding}">
+              <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+
+    <Style TargetType="TextBox">
+      <Setter Property="Padding" Value="8,6"/>
+      <Setter Property="Margin" Value="0,0,0,8"/>
+      <Setter Property="BorderBrush" Value="#334155"/>
+      <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+    <Style TargetType="PasswordBox">
+      <Setter Property="Padding" Value="8,6"/>
+      <Setter Property="Margin" Value="0,0,0,8"/>
+      <Setter Property="BorderBrush" Value="#334155"/>
+      <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+    <Style TargetType="ComboBox">
+      <Setter Property="Padding" Value="6,4"/>
+      <Setter Property="Margin" Value="0,0,0,8"/>
+    </Style>
+    <Style TargetType="DataGrid">
+      <Setter Property="AutoGenerateColumns" Value="False"/>
+      <Setter Property="IsReadOnly" Value="True"/>
+      <Setter Property="CanUserAddRows" Value="False"/>
+      <Setter Property="HeadersVisibility" Value="Column"/>
+      <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+      <Setter Property="BorderBrush" Value="{StaticResource LineBrush}"/>
+      <Setter Property="Background" Value="White"/>
+      <Setter Property="RowBackground" Value="White"/>
+      <Setter Property="AlternatingRowBackground" Value="#F0F9FF"/>
+    </Style>
+    <Style TargetType="TabControl">
+      <Setter Property="Background" Value="Transparent"/>
+      <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+    <Style TargetType="TabItem">
+      <Setter Property="Padding" Value="14,8"/>
+      <Setter Property="FontWeight" Value="SemiBold"/>
+    </Style>
+  </Application.Resources>
+</Application>

@@ -1,0 +1,181 @@
+<Window x:Class="HospitalDesktop.Views.DoctorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:HospitalDesktop.Ui"
+        Title="Doctor desk — Hospital Management Suite"
+        Height="740" Width="980"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource DoctorBurgundyBrush}">
+  <DockPanel>
+    <ui:CaptionBar x:Name="Caption" DockPanel.Dock="Top"
+                   Title="Doctor desk"
+                   AccentBrush="{StaticResource DoctorBurgundySoftBrush}"
+                   CloseRequested="Caption_CloseRequested"/>
+    <Border DockPanel.Dock="Top" Background="{StaticResource DoctorBurgundySoftBrush}" Padding="16,12">
+      <Grid>
+        <StackPanel Orientation="Horizontal">
+          <Border Width="64" Height="64" CornerRadius="32" Background="White" Margin="0,0,12,0">
+            <Image Source="/Assets/doctor-male-to-right.png" Stretch="Uniform" Margin="4"/>
+          </Border>
+          <StackPanel VerticalAlignment="Center">
+            <TextBlock x:Name="UserLabel" Foreground="#FFCCAAAA" FontSize="13"/>
+            <TextBlock x:Name="MenuTitle" FontSize="26" FontWeight="Bold" Foreground="White"/>
+          </StackPanel>
+        </StackPanel>
+        <ui:LanguageBar HorizontalAlignment="Right" VerticalAlignment="Top"/>
+      </Grid>
+    </Border>
+
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="320"/>
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+
+      <StackPanel Grid.Column="0" Margin="24,20,12,20">
+        <Button Style="{StaticResource CreamMenuButton}" Click="ShowCalendar_Click">
+          <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/lekar-icons/radni-kalendar-icon.png" Width="40" Margin="0,0,12,0"/>
+            <TextBlock Text="Work calendar" VerticalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button Style="{StaticResource CreamMenuButton}" Click="ShowRecords_Click">
+          <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/lekar-icons/pacijenti-icon.png" Width="40" Margin="0,0,12,0"/>
+            <TextBlock Text="Patient records" VerticalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button Style="{StaticResource CreamMenuButton}" Click="ShowRx_Click">
+          <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/lekar-icons/lekovi-icon.png" Width="40" Margin="0,0,12,0"/>
+            <TextBlock Text="Medicines &amp; Rx" VerticalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button Style="{StaticResource CreamMenuButton}" Click="ShowReview_Click">
+          <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/lekar-icons/feedback-icon.png" Width="40" Margin="0,0,12,0"/>
+            <TextBlock Text="Medicine review" VerticalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button Style="{StaticResource CreamMenuButton}" Click="ShowStay_Click">
+          <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/lekar-icons/pacijenti-icon.png" Width="40" Margin="0,0,12,0"/>
+            <TextBlock Text="Stays &amp; referrals" VerticalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+        <Button Style="{StaticResource CreamMenuButton}" Click="SignOut_Click" Margin="0,24,0,0">
+          <StackPanel Orientation="Horizontal">
+            <Image Source="/Assets/lekar-icons/logout-icon.png" Width="36" Margin="0,0,12,0"/>
+            <TextBlock Text="Sign out" VerticalAlignment="Center"/>
+          </StackPanel>
+        </Button>
+      </StackPanel>
+
+      <Border Grid.Column="1" Background="#FFF8F4F0" CornerRadius="16,0,0,0" Margin="0,12,0,0" Padding="16">
+        <TabControl x:Name="Tabs" BorderThickness="0" Background="Transparent">
+          <TabItem Header="Calendar">
+            <DockPanel Margin="4">
+              <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,8,0,0">
+                <TextBox x:Name="AnamnesisBox" Width="260" Margin="0,0,8,0" ToolTip="Anamnesis"/>
+                <Button Content="Complete" Style="{StaticResource PrimaryButton}" Click="Complete_Click" Margin="0,0,8,0"/>
+                <Button Content="Cancel" Padding="12,8" Click="Cancel_Click"/>
+                <TextBlock x:Name="Msg" Margin="12,0,0,0" VerticalAlignment="Center"/>
+              </StackPanel>
+              <DataGrid x:Name="ApptGrid">
+                <DataGrid.Columns>
+                  <DataGridTextColumn Header="When" Binding="{Binding StartsAt}" Width="170"/>
+                  <DataGridTextColumn Header="Patient" Binding="{Binding PatientUsername}" Width="110"/>
+                  <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="90"/>
+                  <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="90"/>
+                  <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" Width="*"/>
+                </DataGrid.Columns>
+              </DataGrid>
+            </DockPanel>
+          </TabItem>
+          <TabItem Header="Records">
+            <DockPanel Margin="4">
+              <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+                <ComboBox x:Name="RecPatient" Width="220" DisplayMemberPath="DisplayName" SelectionChanged="RecPatient_Changed"/>
+                <Button Content="Save" Style="{StaticResource PrimaryButton}" Margin="8,0,0,0" Click="SaveRec_Click"/>
+              </StackPanel>
+              <TextBox x:Name="RecSummary" AcceptsReturn="True" TextWrapping="Wrap"/>
+            </DockPanel>
+          </TabItem>
+          <TabItem Header="Rx">
+            <DockPanel Margin="4">
+              <Border DockPanel.Dock="Bottom" Padding="10" Background="White" Margin="0,8,0,0">
+                <StackPanel Orientation="Horizontal">
+                  <ComboBox x:Name="RxPatient" Width="160" DisplayMemberPath="DisplayName" Margin="0,0,8,0"/>
+                  <ComboBox x:Name="RxMedicine" Width="180" DisplayMemberPath="Name" Margin="0,0,8,0"/>
+                  <TextBox x:Name="RxDosage" Width="160" Text="1 tablet twice daily" Margin="0,0,8,0"/>
+                  <Button Content="Issue" Style="{StaticResource PrimaryButton}" Click="IssueRx_Click"/>
+                </StackPanel>
+              </Border>
+              <DataGrid x:Name="RxGrid">
+                <DataGrid.Columns>
+                  <DataGridTextColumn Header="Patient" Binding="{Binding PatientUsername}" Width="110"/>
+                  <DataGridTextColumn Header="Medicine" Binding="{Binding MedicineName}" Width="*"/>
+                  <DataGridTextColumn Header="Dosage" Binding="{Binding Dosage}" Width="160"/>
+                </DataGrid.Columns>
+              </DataGrid>
+            </DockPanel>
+          </TabItem>
+          <TabItem Header="Review">
+            <DockPanel Margin="4">
+              <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,8,0,0">
+                <Button Content="Approve" Style="{StaticResource PrimaryButton}" Click="Approve_Click" Margin="0,0,8,0"/>
+                <Button Content="Reject" Padding="12,8" Click="Reject_Click"/>
+              </StackPanel>
+              <DataGrid x:Name="MedGrid">
+                <DataGrid.Columns>
+                  <DataGridTextColumn Header="Code" Binding="{Binding Code}" Width="100"/>
+                  <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                  <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="130"/>
+                </DataGrid.Columns>
+              </DataGrid>
+            </DockPanel>
+          </TabItem>
+          <TabItem Header="Stays">
+            <ScrollViewer Margin="4">
+              <StackPanel>
+                <TextBlock Text="Hospitalizations" FontWeight="Bold" Margin="0,0,0,6"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                  <ComboBox x:Name="StayPatient" Width="160" DisplayMemberPath="DisplayName" Margin="0,0,8,0"/>
+                  <ComboBox x:Name="StayRoom" Width="100" DisplayMemberPath="Code" Margin="0,0,8,0"/>
+                  <TextBox x:Name="StayReason" Width="180" Text="Observation" Margin="0,0,8,0"/>
+                  <Button Content="Admit" Style="{StaticResource PrimaryButton}" Click="Admit_Click" Margin="0,0,8,0"/>
+                  <Button Content="Discharge selected" Style="{StaticResource GhostButton}" Click="Discharge_Click"/>
+                </StackPanel>
+                <TextBlock x:Name="StayMsg" Margin="0,0,0,8" Foreground="#B91C1C"/>
+                <DataGrid x:Name="StayGrid" Height="160" Margin="0,0,0,16">
+                  <DataGrid.Columns>
+                    <DataGridTextColumn Header="Patient" Binding="{Binding PatientUsername}" Width="100"/>
+                    <DataGridTextColumn Header="Room" Binding="{Binding RoomCode}" Width="70"/>
+                    <DataGridTextColumn Header="Reason" Binding="{Binding Reason}" Width="*"/>
+                    <DataGridTextColumn Header="Admitted" Binding="{Binding AdmittedAt}" Width="160"/>
+                    <DataGridTextColumn Header="Discharged" Binding="{Binding DischargedAt}" Width="160"/>
+                  </DataGrid.Columns>
+                </DataGrid>
+                <TextBlock Text="Referrals" FontWeight="Bold" Margin="0,0,0,6"/>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                  <ComboBox x:Name="RefPatient" Width="160" DisplayMemberPath="DisplayName" Margin="0,0,8,0"/>
+                  <ComboBox x:Name="RefTo" Width="160" DisplayMemberPath="DisplayName" Margin="0,0,8,0"/>
+                  <TextBox x:Name="RefReason" Width="200" Text="Specialist consult" Margin="0,0,8,0"/>
+                  <Button Content="Refer" Style="{StaticResource PrimaryButton}" Click="Refer_Click"/>
+                </StackPanel>
+                <DataGrid x:Name="RefGrid" Height="160">
+                  <DataGrid.Columns>
+                    <DataGridTextColumn Header="Patient" Binding="{Binding PatientUsername}" Width="100"/>
+                    <DataGridTextColumn Header="From" Binding="{Binding FromDoctor}" Width="100"/>
+                    <DataGridTextColumn Header="To" Binding="{Binding ToDoctor}" Width="100"/>
+                    <DataGridTextColumn Header="Reason" Binding="{Binding Reason}" Width="*"/>
+                  </DataGrid.Columns>
+                </DataGrid>
+              </StackPanel>
+            </ScrollViewer>
+          </TabItem>
+        </TabControl>
+      </Border>
+    </Grid>
+  </DockPanel>
+</Window>

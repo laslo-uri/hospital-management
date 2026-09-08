@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+  <rect width="960" height="520" fill="#f7fbfe"/>
+  <defs>
+    <marker id="archarr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#009CDE"/>
+    </marker>
+  </defs>
+  <style>
+    .t { font-family: 'Segoe UI', Calibri, sans-serif; fill: #1c2430; }
+    .h { font-family: 'Segoe UI', Calibri, sans-serif; fill: #1c2430; font-weight: 600; }
+    .a { font-family: 'Segoe UI', Calibri, sans-serif; fill: #009CDE; font-weight: 600; }
+    .s { font-family: 'Segoe UI', Calibri, sans-serif; fill: #5a6270; }
+    .w { font-family: 'Segoe UI', Calibri, sans-serif; fill: #fff; font-weight: 600; }
+    .m { font-family: Consolas, 'Cascadia Mono', monospace; fill: #1c2430; }
+  </style>
+  <text x="40" y="28" class="h" font-size="16" text-anchor="start">Runtime architecture</text>
+<text x="40" y="48" class="s" font-size="11" text-anchor="start">Bolnica 1.0.0  |  freeze under _legacy-1.0.0  |  one WPF process, four role shells, shared JSON</text>
+<rect x="40" y="68" width="880" height="64" rx="4" fill="#e6eef8" stroke="#c5d9e8" stroke-width="1"/>
+<rect x="40" y="68" width="8" height="64" rx="0" fill="#2f6aa0" stroke="#2f6aa0" stroke-width="0"/>
+<text x="64" y="92" class="a" font-size="13" text-anchor="start">01</text>
+<text x="108" y="92" class="h" font-size="14" text-anchor="start">View</text>
+<text x="250" y="92" class="s" font-size="11" text-anchor="start">WPF XAML</text>
+<text x="108" y="114" class="t" font-size="12" text-anchor="start">MainWindow login  ->  LekarHome / SekretarHome / UpravnikHome / PacijentHome</text>
+<rect x="40" y="144" width="880" height="64" rx="4" fill="#e3f4fb" stroke="#c5d9e8" stroke-width="1"/>
+<rect x="40" y="144" width="8" height="64" rx="0" fill="#009CDE" stroke="#009CDE" stroke-width="0"/>
+<text x="64" y="168" class="a" font-size="13" text-anchor="start">02</text>
+<text x="108" y="168" class="h" font-size="14" text-anchor="start">Controller</text>
+<text x="250" y="168" class="s" font-size="11" text-anchor="start">Kontroler</text>
+<text x="108" y="190" class="t" font-size="12" text-anchor="start">Role and domain facades; mostly code-behind calls</text>
+<rect x="40" y="220" width="880" height="64" rx="4" fill="#e8f3eb" stroke="#c5d9e8" stroke-width="1"/>
+<rect x="40" y="220" width="8" height="64" rx="0" fill="#3e7a55" stroke="#3e7a55" stroke-width="0"/>
+<text x="64" y="244" class="a" font-size="13" text-anchor="start">03</text>
+<text x="108" y="244" class="h" font-size="14" text-anchor="start">Service</text>
+<text x="250" y="244" class="s" font-size="11" text-anchor="start">Servis</text>
+<text x="108" y="266" class="t" font-size="12" text-anchor="start">Appointments, drugs, rooms, inventory, anti-spam, reminders</text>
+<rect x="40" y="296" width="880" height="64" rx="4" fill="#fbeee9" stroke="#c5d9e8" stroke-width="1"/>
+<rect x="40" y="296" width="8" height="64" rx="0" fill="#c45c3e" stroke="#c45c3e" stroke-width="0"/>
+<text x="64" y="320" class="a" font-size="13" text-anchor="start">04</text>
+<text x="108" y="320" class="h" font-size="14" text-anchor="start">Repository</text>
+<text x="250" y="320" class="s" font-size="11" text-anchor="start">singleton GetInstance</text>
+<text x="108" y="342" class="t" font-size="12" text-anchor="start">In-memory lists; SaveData() with System.Text.Json</text>
+<rect x="40" y="372" width="880" height="64" rx="4" fill="#faf3de" stroke="#c5d9e8" stroke-width="1"/>
+<rect x="40" y="372" width="8" height="64" rx="0" fill="#c9a227" stroke="#c9a227" stroke-width="0"/>
+<text x="64" y="396" class="a" font-size="13" text-anchor="start">05</text>
+<text x="108" y="396" class="h" font-size="14" text-anchor="start">Files</text>
+<text x="250" y="396" class="s" font-size="11" text-anchor="start">podaci/*.json</text>
+<text x="108" y="418" class="t" font-size="12" text-anchor="start">Nineteen JSON aggregates (patients, doctors, rooms, ...)</text>
+<text x="40" y="456" class="s" font-size="11" text-anchor="start">Background threads: user suspension, medication reminders, inventory reallocation.</text>
+</svg>

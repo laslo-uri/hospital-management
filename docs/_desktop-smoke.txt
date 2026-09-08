@@ -1,0 +1,26 @@
+Hospital Desktop smoke
+db=C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\desktop\data\hospital-desktop.db
+PASS  auth manager
+PASS  auth secretary
+PASS  auth doctor
+PASS  auth patient
+PASS  auth reject
+PASS  rooms >= 30
+PASS  inventory >= 40
+PASS  medicines >= 20
+PASS  appointments >= 20
+PASS  announcements >= 8
+PASS  doctors >= 8
+PASS  patients >= 40
+PASS  add room
+PASS  rooms after add
+PASS  approve medicine
+PASS  book appointment
+PASS  booked visible
+PASS  complete appointment
+PASS  issue prescription
+PASS  save record
+PASS  post announcement
+PASS  register patient
+PASS  register auth
+ALL PASSED

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <rect width="960" height="540" fill="#f7fbfe"/>
+  <defs>
+    <marker id="ucarr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M0,0 L7,3.5 L0,7 Z" fill="#009CDE"/>
+    </marker>
+  </defs>
+  <style>
+    .t { font-family: 'Segoe UI', Calibri, sans-serif; fill: #1c2430; }
+    .h { font-family: 'Segoe UI', Calibri, sans-serif; fill: #1c2430; font-weight: 600; }
+    .a { font-family: 'Segoe UI', Calibri, sans-serif; fill: #009CDE; font-weight: 600; }
+    .s { font-family: 'Segoe UI', Calibri, sans-serif; fill: #5a6270; }
+    .w { font-family: 'Segoe UI', Calibri, sans-serif; fill: #fff; font-weight: 600; }
+    .m { font-family: Consolas, 'Cascadia Mono', monospace; fill: #1c2430; }
+  </style>
+  <text x="40" y="28" class="h" font-size="16" text-anchor="start">Use cases</text>
+<text x="40" y="48" class="s" font-size="11" text-anchor="start">Four actors share one executable and one JSON store.</text>
+<rect x="200" y="70" width="560" height="430" rx="8" fill="#ffffff" stroke="#009CDE" stroke-width="1.6"/>
+<text x="480" y="96" class="a" font-size="13" text-anchor="middle">Bolnica 1.0.0</text>
+<circle cx="80" cy="160" r="12" fill="#faf3de" stroke="#c9a227" stroke-width="1.6"/>
+<line x1="80" y1="172" x2="80" y2="208" stroke="#c9a227" stroke-width="1.6"/>
+<line x1="62" y1="188" x2="98" y2="188" stroke="#c9a227" stroke-width="1.6"/>
+<line x1="80" y1="208" x2="66" y2="232" stroke="#c9a227" stroke-width="1.6"/>
+<line x1="80" y1="208" x2="94" y2="232" stroke="#c9a227" stroke-width="1.6"/>
+<text x="80" y="252" class="h" font-size="11" text-anchor="middle">Upravnik</text>
+<circle cx="80" cy="320" r="12" fill="#e8f3eb" stroke="#3e7a55" stroke-width="1.6"/>
+<line x1="80" y1="332" x2="80" y2="368" stroke="#3e7a55" stroke-width="1.6"/>
+<line x1="62" y1="348" x2="98" y2="348" stroke="#3e7a55" stroke-width="1.6"/>
+<line x1="80" y1="368" x2="66" y2="392" stroke="#3e7a55" stroke-width="1.6"/>
+<line x1="80" y1="368" x2="94" y2="392" stroke="#3e7a55" stroke-width="1.6"/>
+<text x="80" y="412" class="h" font-size="11" text-anchor="middle">Sekretar</text>
+<circle cx="880" cy="160" r="12" fill="#e3f4fb" stroke="#009CDE" stroke-width="1.6"/>
+<line x1="880" y1="172" x2="880" y2="208" stroke="#009CDE" stroke-width="1.6"/>
+<line x1="862" y1="188" x2="898" y2="188" stroke="#009CDE" stroke-width="1.6"/>
+<line x1="880" y1="208" x2="866" y2="232" stroke="#009CDE" stroke-width="1.6"/>
+<line x1="880" y1="208" x2="894" y2="232" stroke="#009CDE" stroke-width="1.6"/>
+<text x="880" y="252" class="h" font-size="11" text-anchor="middle">Lekar</text>
+<circle cx="880" cy="320" r="12" fill="#fbeee9" stroke="#c45c3e" stroke-width="1.6"/>
+<line x1="880" y1="332" x2="880" y2="368" stroke="#c45c3e" stroke-width="1.6"/>
+<line x1="862" y1="348" x2="898" y2="348" stroke="#c45c3e" stroke-width="1.6"/>
+<line x1="880" y1="368" x2="866" y2="392" stroke="#c45c3e" stroke-width="1.6"/>
+<line x1="880" y1="368" x2="894" y2="392" stroke="#c45c3e" stroke-width="1.6"/>
+<text x="880" y="412" class="h" font-size="11" text-anchor="middle">Pacijent</text>
+<ellipse cx="480" cy="140" rx="220" ry="16" fill="#e6eef8" stroke="#2f6aa0" stroke-width="1.2"/>
+<text x="480" y="145" class="t" font-size="11" text-anchor="middle">Login (shared)</text>
+<ellipse cx="480" cy="185" rx="220" ry="16" fill="#faf3de" stroke="#c9a227" stroke-width="1.2"/>
+<text x="480" y="190" class="t" font-size="11" text-anchor="middle">Manage rooms and equipment</text>
+<ellipse cx="480" cy="230" rx="220" ry="16" fill="#e8f3eb" stroke="#3e7a55" stroke-width="1.2"/>
+<text x="480" y="235" class="t" font-size="11" text-anchor="middle">Register patients and staff</text>
+<ellipse cx="480" cy="275" rx="220" ry="16" fill="#e8f3eb" stroke="#3e7a55" stroke-width="1.2"/>
+<text x="480" y="280" class="t" font-size="11" text-anchor="middle">Schedule exam or operation</text>
+<ellipse cx="480" cy="320" rx="220" ry="16" fill="#e3f4fb" stroke="#009CDE" stroke-width="1.2"/>
+<text x="480" y="325" class="t" font-size="11" text-anchor="middle">Work calendar / record visit</text>
+<ellipse cx="480" cy="365" rx="220" ry="16" fill="#e3f4fb" stroke="#009CDE" stroke-width="1.2"/>
+<text x="480" y="370" class="t" font-size="11" text-anchor="middle">Issue prescription / review drugs</text>
+<ellipse cx="480" cy="410" rx="220" ry="16" fill="#fbeee9" stroke="#c45c3e" stroke-width="1.2"/>
+<text x="480" y="415" class="t" font-size="11" text-anchor="middle">Book / cancel own appointment</text>
+<ellipse cx="480" cy="455" rx="220" ry="16" fill="#fbeee9" stroke="#c45c3e" stroke-width="1.2"/>
+<text x="480" y="460" class="t" font-size="11" text-anchor="middle">Reminders, surveys, karton</text>
+</svg>

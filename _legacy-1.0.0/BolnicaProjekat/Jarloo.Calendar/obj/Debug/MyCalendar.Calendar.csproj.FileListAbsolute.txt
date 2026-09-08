@@ -1,0 +1,90 @@
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\Themes\Generic.baml
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.pdb
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csprojResolveAssemblyReference.cache
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.cache
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.lref
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.g.resources
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.dll
+C:\Users\Te4o\Desktop\Програмни Среди Курсова\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.pdb
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.dll
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.pdb
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.cache
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.lref
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\Themes\Generic.baml
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.g.resources
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CoreCompileInputs.cache
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CopyComplete
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.dll
+C:\Users\Milica\Desktop\kalendat\MyCalendar-master\JarlooCalendar\Jarloo.Calendar\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.pdb
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.dll
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.pdb
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csprojAssemblyReference.cache
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\Themes\Generic.baml
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.cache
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.lref
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.g.resources
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CoreCompileInputs.cache
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CopyComplete
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.dll
+D:\FTN\6. semestar\SIMS - Specifikacija i modeliranje softvera\GitHub\Projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.pdb
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.dll
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.pdb
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.cache
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.lref
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\Themes\Generic.baml
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.g.resources
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CoreCompileInputs.cache
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CopyComplete
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.dll
+C:\Users\Mihajlo\Desktop\sims projekat\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.pdb
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.dll
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.pdb
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csprojAssemblyReference.cache
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\Themes\Generic.baml
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.cache
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.lref
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.g.resources
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CoreCompileInputs.cache
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CopyComplete
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.dll
+D:\RA\RASTISLAV\SIMS\SIMS_IS_Bolnica\SIMS_IS_Bolnica\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.pdb
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.dll
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.dll
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\bin\Debug\MyCalendar.Calendar.pdb
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.AssemblyReference.cache
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.cache
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar_MarkupCompile.lref
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\Themes\Generic.baml
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.g.resources
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.csproj.CoreCompileInputs.cache
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalend.0F235860.Up2Date
+C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\_legacy-1.0.0\BolnicaProjekat\Jarloo.Calendar\obj\Debug\MyCalendar.Calendar.pdb

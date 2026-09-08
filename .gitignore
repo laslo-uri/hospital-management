@@ -11,10 +11,13 @@
 
 #ono sto smo mi dodali
 .vs
-BolnicaProjekat/Bolnica/.vs
-BolnicaProjekat/Bolnica/bin
-BolnicaProjekat/Bolnica/obj
-BolnicaProjekat/Bolnica/.vs/Project/v16
+_legacy-1.0.0/BolnicaProjekat/Bolnica/.vs
+_legacy-1.0.0/BolnicaProjekat/Bolnica/bin
+_legacy-1.0.0/BolnicaProjekat/Bolnica/obj
+_legacy-1.0.0/BolnicaProjekat/Bolnica/.vs/Project/v16
+docs/_preview/
+docs/_*.html
+docs/__pycache__/
 
 
 # User-specific files
@@ -31,7 +34,7 @@ BolnicaProjekat/Bolnica/.vs/Project/v16
 mono_crash.*
 
 # Build results
-BolnicaProjekat/Bolnica/[Dd]ebug/
+_legacy-1.0.0/BolnicaProjekat/Bolnica/[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -41,8 +44,8 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-BolnicaProjekat/Bolnica/[Bb]in/
-BolnicaProjekat/Bolnica/[Oo]bj/
+_legacy-1.0.0/BolnicaProjekat/Bolnica/[Bb]in/
+_legacy-1.0.0/BolnicaProjekat/Bolnica/[Oo]bj/
 [Ll]og/
 [Ll]ogs/
 
@@ -540,3 +543,35 @@ FodyWeavers.xsd
 *.tlog
 
 # End of https://www.toptal.com/developers/gitignore/api/csharp,visualstudio
+
+# Dossier build temps
+docs/_preview/
+docs/_*.html
+docs/__pycache__/
+
+
+docs/CaptureBolnica.exe
+docs/CaptureBolnica.pdb
+docs/capture_log.txt
+
+# Hospital 2.0.0 (Next.js)
+app/node_modules/
+app/.next/
+app/out/
+app/coverage/
+app/test-results/
+app/playwright-report/
+data/*.db
+data/*.db-*
+data/hospital-desktop.db
+data/hospital-desktop.db-*
+*.db-shm
+*.db-wal
+
+# Desktop 2.0.0
+desktop/**/bin/
+desktop/**/obj/
+desktop/data/
+desktop/**/*.db
+desktop/**/*.db-*
+

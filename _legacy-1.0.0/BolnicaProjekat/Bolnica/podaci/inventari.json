@@ -1,0 +1,431 @@
+[
+  {
+    "Id": 0,
+    "IdProstorije": -1,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "sto",
+        "Naziv": "Stolica",
+        "Tip": 0,
+        "Opis": "Stolica za sedenje",
+        "Kolicina": 26,
+        "Cena": 2500,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "kr9VETR",
+        "Naziv": "Krevet",
+        "Tip": 0,
+        "Opis": "Krevet za oporavak pacijenata koji boluju",
+        "Kolicina": 32,
+        "Cena": 12000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "ctS559",
+        "Naziv": "CT skener",
+        "Tip": 0,
+        "Opis": "CT skener za analizu ljudskog tela, poprecnog preseka",
+        "Kolicina": 2,
+        "Cena": 14900000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "HANz00",
+        "Naziv": "Hanzaplast",
+        "Tip": 1,
+        "Opis": "Zaustavlja spoljasnje krvarenje",
+        "Kolicina": 239,
+        "Cena": 5,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "tvsamsung",
+        "Naziv": "TV",
+        "Tip": 0,
+        "Opis": "TV za zabavu",
+        "Kolicina": 9,
+        "Cena": 56000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "inf1L",
+        "Naziv": "Infuzija",
+        "Tip": 1,
+        "Opis": "Infuzija natrijum hlorid ",
+        "Kolicina": 25,
+        "Cena": 60,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "mak",
+        "Naziv": "Makaze",
+        "Tip": 1,
+        "Opis": "Medicinske makaze",
+        "Kolicina": 13,
+        "Cena": 125,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "pc",
+        "Naziv": "Racunar",
+        "Tip": 0,
+        "Opis": "Racunar za evidenciju ",
+        "Kolicina": 29,
+        "Cena": 60000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "rengen",
+        "Naziv": "Rengen",
+        "Tip": 0,
+        "Opis": "Rengen masina za rengensko skeniranje",
+        "Kolicina": 4,
+        "Cena": 250000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "air22Ma",
+        "Naziv": "Klima Uredjaj",
+        "Tip": 0,
+        "Opis": "Rashladni uredjaj",
+        "Kolicina": 39,
+        "Cena": 26000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "uv200Lampa",
+        "Naziv": "UV Lampa",
+        "Tip": 0,
+        "Opis": "UV Lampa za ciscenje vazduha",
+        "Kolicina": 22,
+        "Cena": 5499,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 1,
+    "IdProstorije": 1,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "ctS559",
+        "Naziv": "CT skener",
+        "Tip": 0,
+        "Opis": "CT skener za analizu ljudskog tela, poprecnog preseka",
+        "Kolicina": 1,
+        "Cena": 14900000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "mak",
+        "Naziv": "Makaze",
+        "Tip": 1,
+        "Opis": "Medicinske makaze",
+        "Kolicina": 10,
+        "Cena": 125,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "tvsamsung",
+        "Naziv": "TV",
+        "Tip": 0,
+        "Opis": "TV za zabavu",
+        "Kolicina": 2,
+        "Cena": 56000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "pc",
+        "Naziv": "Racunar",
+        "Tip": 0,
+        "Opis": "Racunar za evidenciju ",
+        "Kolicina": 2,
+        "Cena": 60000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "inf1L",
+        "Naziv": "Infuzija",
+        "Tip": 1,
+        "Opis": "Infuzija natrijum hlorid ",
+        "Kolicina": 2,
+        "Cena": 60,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "HANz00",
+        "Naziv": "Hanzaplast",
+        "Tip": 1,
+        "Opis": "Zaustavlja spoljasnje krvarenje",
+        "Kolicina": 1,
+        "Cena": 5,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 2,
+    "IdProstorije": 2,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "sto",
+        "Naziv": "Stolica",
+        "Tip": 0,
+        "Opis": "Stolica za sedenje",
+        "Kolicina": 4,
+        "Cena": 2500,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "inf1L",
+        "Naziv": "Infuzija",
+        "Tip": 1,
+        "Opis": "Infuzija natrijum hlorid ",
+        "Kolicina": 7,
+        "Cena": 60,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "HANz00",
+        "Naziv": "Hanzaplast",
+        "Tip": 1,
+        "Opis": "Zaustavlja spoljasnje krvarenje",
+        "Kolicina": 10,
+        "Cena": 5,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "tvsamsung",
+        "Naziv": "TV",
+        "Tip": 0,
+        "Opis": "TV za zabavu",
+        "Kolicina": 2,
+        "Cena": 56000,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 3,
+    "IdProstorije": 3,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "ctS559",
+        "Naziv": "CT skener",
+        "Tip": 0,
+        "Opis": "CT skener za analizu ljudskog tela, poprecnog preseka",
+        "Kolicina": 1,
+        "Cena": 14900000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "kr9VETR",
+        "Naziv": "Krevet",
+        "Tip": 0,
+        "Opis": "Krevet za oporavak pacijenata koji boluju",
+        "Kolicina": 2,
+        "Cena": 12000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "inf1L",
+        "Naziv": "Infuzija",
+        "Tip": 1,
+        "Opis": "Infuzija natrijum hlorid ",
+        "Kolicina": 8,
+        "Cena": 60,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "mak",
+        "Naziv": "Makaze",
+        "Tip": 1,
+        "Opis": "Medicinske makaze",
+        "Kolicina": 2,
+        "Cena": 125,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "tvsamsung",
+        "Naziv": "TV",
+        "Tip": 0,
+        "Opis": "TV za zabavu",
+        "Kolicina": 1,
+        "Cena": 56000,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 4,
+    "IdProstorije": 4,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "air22Ma",
+        "Naziv": "Klima Uredjaj",
+        "Tip": 0,
+        "Opis": "Rashladni uredjaj",
+        "Kolicina": 1,
+        "Cena": 26000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "tvsamsung",
+        "Naziv": "TV",
+        "Tip": 0,
+        "Opis": "TV za zabavu",
+        "Kolicina": 2,
+        "Cena": 56000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "rengen",
+        "Naziv": "Rengen",
+        "Tip": 0,
+        "Opis": "Rengen masina za rengensko skeniranje",
+        "Kolicina": 1,
+        "Cena": 250000,
+        "IdInventar": 0
+      },
+      {
+        "Id": -1,
+        "Sifra": "uv200Lampa",
+        "Naziv": "UV Lampa",
+        "Tip": 0,
+        "Opis": "UV Lampa za ciscenje vazduha",
+        "Kolicina": 3,
+        "Cena": 5499,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 5,
+    "IdProstorije": 5,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 8,
+    "IdProstorije": 8,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "kr9VETR",
+        "Naziv": "Krevet",
+        "Tip": 0,
+        "Opis": "Krevet za oporavak pacijenata koji boluju",
+        "Kolicina": 5,
+        "Cena": 12000,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 9,
+    "IdProstorije": 9,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 10,
+    "IdProstorije": 10,
+    "LOprema": [
+      {
+        "Id": -1,
+        "Sifra": "kr9VETR",
+        "Naziv": "Krevet",
+        "Tip": 0,
+        "Opis": "Krevet za oporavak pacijenata koji boluju",
+        "Kolicina": 6,
+        "Cena": 12000,
+        "IdInventar": 0
+      }
+    ],
+    "LLekovi": []
+  },
+  {
+    "Id": 11,
+    "IdProstorije": 11,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 16,
+    "IdProstorije": 16,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 17,
+    "IdProstorije": 17,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 18,
+    "IdProstorije": 18,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 19,
+    "IdProstorije": 19,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 20,
+    "IdProstorije": 20,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 21,
+    "IdProstorije": 21,
+    "LOprema": [],
+    "LLekovi": []
+  },
+  {
+    "Id": 22,
+    "IdProstorije": 22,
+    "LOprema": [],
+    "LLekovi": []
+  }
+]

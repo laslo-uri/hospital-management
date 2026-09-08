@@ -1,0 +1,44 @@
+<UserControl x:Class="HospitalDesktop.Ui.CaptionBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="36"
+             Background="{Binding AccentBrush, RelativeSource={RelativeSource Self}}">
+  <Grid>
+    <Border Background="Transparent" MouseLeftButtonDown="Drag_MouseLeftButtonDown"/>
+    <TextBlock Text="{Binding Title, RelativeSource={RelativeSource AncestorType=UserControl}}"
+               VerticalAlignment="Center" Margin="14,0,120,0"
+               Foreground="White" FontSize="12" FontWeight="SemiBold"
+               IsHitTestVisible="False"/>
+    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+      <Button x:Name="MinButton" Width="46" Click="Min_Click" Cursor="Hand"
+              Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14"
+              ToolTip="Minimize" Content="─"/>
+      <Button x:Name="MaxButton" Width="46" Click="Max_Click" Cursor="Hand"
+              Background="Transparent" BorderThickness="0" Foreground="White" FontSize="12"
+              ToolTip="Maximize" Content="☐"/>
+      <Button x:Name="CloseButton" Width="46" Click="Close_Click" Cursor="Hand"
+              Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14"
+              ToolTip="Close" Content="✕">
+        <Button.Style>
+          <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Template">
+              <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                  <Border x:Name="bd" Background="{TemplateBinding Background}">
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                  </Border>
+                  <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                      <Setter TargetName="bd" Property="Background" Value="#E81123"/>
+                    </Trigger>
+                  </ControlTemplate.Triggers>
+                </ControlTemplate>
+              </Setter.Value>
+            </Setter>
+          </Style>
+        </Button.Style>
+      </Button>
+    </StackPanel>
+  </Grid>
+</UserControl>

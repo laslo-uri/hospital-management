@@ -1,0 +1,138 @@
+﻿=== WEB check ===
+node.exe : npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm 
+help npmrc` for supported config options.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...config options.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+> hospital-management-suite@2.0.0 check
+> npm run lint && npm run test
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` 
+for supported config options.
+
+> hospital-management-suite@2.0.0 lint
+> eslint .
+
+npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm help npmrc` 
+for supported config options.
+
+> hospital-management-suite@2.0.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the 
+default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` 
+in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v4.1.11 C:/Users/Laslo Uri/Desktop/my_projects/_older_ftn_projects/HospitalManagementSuite/app
+
+
+ Test Files  2 passed (2)
+      Tests  6 passed (6)
+   Start at  17:33:43
+   Duration  215ms (transform 53ms, setup 0ms, import 86ms, tests 8ms, environment 0ms)
+
+
+exit=0
+=== WEB db:reset ===
+node.exe : npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm 
+help npmrc` for supported config options.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...config options.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+> hospital-management-suite@2.0.0 db:reset
+> tsx src/db/seed.ts --reset
+
+Seeded C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\data\hospital.db { seeded: true }
+
+exit=0
+=== WEB build:ci ===
+node.exe : npm warn Unknown env config "devdir". This will stop working in the next major version of npm. See `npm 
+help npmrc` for supported config options.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (npm warn Unknow...config options.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+> hospital-management-suite@2.0.0 build:ci
+> next build
+
+Γû▓ Next.js 16.1.1 (Turbopack)
+- Experiments (use with caution):
+  ┬╖ optimizePackageImports
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 2.4s
+  Running TypeScript ...
+  Collecting page data using 19 workers ...
+  Generating static pages using 19 workers (0/8) ...
+  Generating static pages using 19 workers (2/8) 
+  Generating static pages using 19 workers (4/8) 
+  Generating static pages using 19 workers (6/8) 
+Γ£ô Generating static pages using 19 workers (8/8) in 484.4ms
+  Finalizing page optimization ...
+
+Route (app)
+Γöî ╞Æ /
+Γö£ Γùï /_not-found
+Γö£ ╞Æ /doctor
+Γö£ ╞Æ /login
+Γö£ ╞Æ /manager
+Γö£ ╞Æ /patient
+Γöö ╞Æ /secretary
+
+
+Γùï  (Static)   prerendered as static content
+╞Æ  (Dynamic)  server-rendered on demand
+
+
+exit=0
+=== DESKTOP build ===
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  HospitalDesktop -> C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\desktop\HospitalDesktop\bin\Release\net8.0-windows\HospitalDesktop.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.58
+
+exit=0
+=== DESKTOP smoke exit=1 ===
+Hospital Desktop smoke
+db=C:\Users\Laslo Uri\Desktop\my_projects\_older_ftn_projects\HospitalManagementSuite\desktop\data\hospital-desktop.db
+PASS  auth manager
+PASS  auth secretary
+PASS  auth doctor
+PASS  auth patient
+PASS  auth reject
+PASS  rooms >= 30
+PASS  inventory >= 40
+PASS  medicines >= 20
+PASS  appointments >= 20
+PASS  announcements >= 8
+PASS  doctors >= 8
+PASS  patients >= 40
+PASS  add room
+PASS  rooms after add
+FAIL  approve medicine: no pending medicine
+FAIL  book appointment: That slot conflicts with another appointment.
+FAIL  booked visible
+PASS  issue prescription
+PASS  save record
+PASS  post announcement
+PASS  register patient
+PASS  register auth
+3 FAILURE(S)

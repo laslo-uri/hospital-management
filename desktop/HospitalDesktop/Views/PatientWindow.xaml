@@ -1,0 +1,131 @@
+<Window x:Class="HospitalDesktop.Views.PatientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="clr-namespace:HospitalDesktop.Ui"
+        Title="Patient portal — Hospital Management Suite"
+        Height="720" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BrandCyanBrush}">
+  <DockPanel>
+    <ui:CaptionBar x:Name="Caption" DockPanel.Dock="Top"
+                   Title="Patient portal"
+                   AccentBrush="{StaticResource BrandCyanDeepBrush}"
+                   CloseRequested="Caption_CloseRequested"/>
+    <Border DockPanel.Dock="Top" Background="{StaticResource BrandCyanDeepBrush}" Padding="16,12">
+      <Grid>
+        <StackPanel Orientation="Horizontal">
+          <Border Width="56" Height="56" CornerRadius="28" Background="White" Margin="0,0,12,0">
+            <Image Source="/Assets/patient-male-to-right.png" Margin="4" Stretch="Uniform"/>
+          </Border>
+          <StackPanel VerticalAlignment="Center">
+            <TextBlock x:Name="DeskTitle" FontSize="22" FontWeight="Bold" Foreground="White"/>
+            <TextBlock x:Name="UserLabel" Foreground="#B3E5FC"/>
+          </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+          <ui:LanguageBar Margin="0,0,12,0"/>
+          <Button x:Name="SignOutBtn" Style="{StaticResource GhostButton}" Click="SignOut_Click"/>
+        </StackPanel>
+      </Grid>
+    </Border>
+    <Border Background="{StaticResource CreamBrush}" CornerRadius="16,16,0,0" Margin="12,0,12,0" Padding="8">
+    <TabControl Margin="4">
+      <TabItem Header="My appointments">
+        <DockPanel Margin="8">
+          <Border DockPanel.Dock="Bottom" Padding="12" BorderBrush="#CBD5E1" BorderThickness="1" Margin="0,8,0,0">
+            <StackPanel Orientation="Horizontal">
+              <ComboBox x:Name="DoctorBox" Width="200" DisplayMemberPath="DisplayName" Margin="0,0,8,0"/>
+              <TextBox x:Name="StartBox" Width="150" Text="2026-09-09 09:00" Margin="0,0,8,0"/>
+              <TextBox x:Name="EndBox" Width="150" Text="2026-09-09 10:00" Margin="0,0,8,0"/>
+              <Button Content="Book exam" Style="{StaticResource PrimaryButton}" Click="Book_Click" Margin="0,0,8,0"/>
+              <Button Content="Cancel selected" Style="{StaticResource GhostButton}" Click="Cancel_Click" Margin="0,0,8,0"/>
+              <TextBox x:Name="RescheduleStart" Width="130" Text="2026-09-10 09:00" Margin="0,0,8,0"/>
+              <TextBox x:Name="RescheduleEnd" Width="130" Text="2026-09-10 10:00" Margin="0,0,8,0"/>
+              <Button Content="Reschedule selected" Style="{StaticResource GhostButton}" Click="Reschedule_Click"/>
+            </StackPanel>
+          </Border>
+          <TextBlock x:Name="Msg" DockPanel.Dock="Bottom" Margin="0,4,0,0" Foreground="#B91C1C"/>
+          <DataGrid x:Name="ApptGrid">
+            <DataGrid.Columns>
+              <DataGridTextColumn Header="When" Binding="{Binding StartsAt}" Width="180"/>
+              <DataGridTextColumn Header="Doctor" Binding="{Binding DoctorUsername}" Width="120"/>
+              <DataGridTextColumn Header="Type" Binding="{Binding Type}" Width="100"/>
+              <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+              <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" Width="*"/>
+            </DataGrid.Columns>
+          </DataGrid>
+        </DockPanel>
+      </TabItem>
+      <TabItem Header="Care">
+        <ScrollViewer Margin="16">
+          <StackPanel>
+            <TextBlock Text="Reminders" FontWeight="Bold" Margin="0,0,0,6"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+              <TextBox x:Name="RemMed" Width="160" Text="Ibuprofen" Margin="0,0,8,0"/>
+              <TextBox x:Name="RemWhen" Width="150" Text="2026-09-08 08:00" Margin="0,0,8,0"/>
+              <TextBox x:Name="RemNote" Width="160" Text="With food" Margin="0,0,8,0"/>
+              <Button Content="Add reminder" Style="{StaticResource PrimaryButton}" Click="AddReminder_Click"/>
+            </StackPanel>
+            <DataGrid x:Name="RemGrid" Height="120" Margin="0,0,0,16">
+              <DataGrid.Columns>
+                <DataGridTextColumn Header="Medicine" Binding="{Binding MedicineName}" Width="*"/>
+                <DataGridTextColumn Header="When" Binding="{Binding RemindAt}" Width="180"/>
+                <DataGridTextColumn Header="Note" Binding="{Binding Note}" Width="160"/>
+              </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Text="Survey" FontWeight="Bold" Margin="0,0,0,6"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+              <ComboBox x:Name="SurveyTarget" Width="120" SelectedIndex="0" Margin="0,0,8,0">
+                <ComboBoxItem Content="HOSPITAL"/>
+                <ComboBoxItem Content="DOCTOR"/>
+              </ComboBox>
+              <TextBox x:Name="SurveyId" Width="100" Text="main" Margin="0,0,8,0"/>
+              <ComboBox x:Name="SurveyRating" Width="60" SelectedIndex="4" Margin="0,0,8,0">
+                <ComboBoxItem Content="1"/><ComboBoxItem Content="2"/><ComboBoxItem Content="3"/>
+                <ComboBoxItem Content="4"/><ComboBoxItem Content="5"/>
+              </ComboBox>
+              <TextBox x:Name="SurveyComment" Width="200" Text="Thanks" Margin="0,0,8,0"/>
+              <Button Content="Submit" Style="{StaticResource PrimaryButton}" Click="Survey_Click"/>
+            </StackPanel>
+            <TextBlock Text="Notifications" FontWeight="Bold" Margin="0,0,0,6"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+              <Button Content="Mark selected read" Style="{StaticResource GhostButton}" Click="MarkRead_Click"/>
+            </StackPanel>
+            <DataGrid x:Name="NotifGrid" Height="160">
+              <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="160"/>
+                <DataGridTextColumn Header="Body" Binding="{Binding Body}" Width="*"/>
+                <DataGridTextColumn Header="Read" Binding="{Binding Read}" Width="60"/>
+              </DataGrid.Columns>
+            </DataGrid>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem Header="Health">
+        <ScrollViewer Margin="16">
+          <StackPanel>
+            <TextBlock Text="Medical summary" FontWeight="Bold" Margin="0,0,0,6"/>
+            <TextBlock x:Name="SummaryText" TextWrapping="Wrap" Margin="0,0,0,16"/>
+            <TextBlock Text="Prescriptions" FontWeight="Bold" Margin="0,0,0,6"/>
+            <DataGrid x:Name="RxGrid" Height="240">
+              <DataGrid.Columns>
+                <DataGridTextColumn Header="Medicine" Binding="{Binding MedicineName}" Width="*"/>
+                <DataGridTextColumn Header="Dosage" Binding="{Binding Dosage}" Width="180"/>
+                <DataGridTextColumn Header="Doctor" Binding="{Binding DoctorUsername}" Width="120"/>
+              </DataGrid.Columns>
+            </DataGrid>
+          </StackPanel>
+        </ScrollViewer>
+      </TabItem>
+      <TabItem Header="Announcements">
+        <DataGrid x:Name="AnnGrid" Margin="8">
+          <DataGrid.Columns>
+            <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="200"/>
+            <DataGridTextColumn Header="Body" Binding="{Binding Body}" Width="*"/>
+          </DataGrid.Columns>
+        </DataGrid>
+      </TabItem>
+    </TabControl>
+    </Border>
+  </DockPanel>
+</Window>
