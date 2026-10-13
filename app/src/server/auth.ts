@@ -117,6 +117,8 @@ export async function getCurrentUser(): Promise<PublicUser | null> {
     row.user.suspendedUntil &&
     new Date(row.user.suspendedUntil).getTime() > Date.now()
   ) {
+    db.delete(sessions).where(eq(sessions.id, id)).run();
+    jar.delete(SESSION_COOKIE);
     return null;
   }
   return toPublicUser(row.user);

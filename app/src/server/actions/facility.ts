@@ -201,7 +201,7 @@ export async function applyDueJobsAction(
   void formData;
   try {
     await requireUser(["MANAGER"]);
-    applyDueJobs(new Date().toISOString());
+    applyDueJobs();
     return { ok: true };
   } catch (err) {
     return {

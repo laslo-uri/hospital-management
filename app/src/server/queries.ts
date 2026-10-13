@@ -43,13 +43,13 @@ export function listPatients() {
 
 export function listRooms() {
   ensureAppReady();
-  applyDueJobs(new Date().toISOString());
+  applyDueJobs();
   return getDb().select().from(rooms).orderBy(asc(rooms.code)).all();
 }
 
 export function listInventory() {
   ensureAppReady();
-  applyDueJobs(new Date().toISOString());
+  applyDueJobs();
   return getDb()
     .select({
       id: inventoryItems.id,
@@ -66,7 +66,7 @@ export function listInventory() {
 
 export function listPendingTransfers() {
   ensureAppReady();
-  applyDueJobs(new Date().toISOString());
+  applyDueJobs();
   return getDb()
     .select()
     .from(equipmentTransfers)
@@ -76,7 +76,7 @@ export function listPendingTransfers() {
 
 export function listPendingRoomJobs() {
   ensureAppReady();
-  applyDueJobs(new Date().toISOString());
+  applyDueJobs();
   return getDb()
     .select()
     .from(roomJobs)

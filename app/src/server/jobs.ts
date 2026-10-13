@@ -6,10 +6,10 @@ import {
   roomJobs,
   rooms,
 } from "@/db/schema";
-import { ensureAppReady } from "@/server/auth";
+import { ensureAppReady, getSeedClock } from "@/server/auth";
 
 /** Apply due equipment transfers and room jobs. Not a Server Action. */
-export function applyDueJobs(nowIso = new Date().toISOString()) {
+export function applyDueJobs(nowIso = getSeedClock().toISOString()) {
   ensureAppReady();
   const db = getDb();
   const dueTransfers = db
@@ -69,11 +69,11 @@ export function applyDueJobs(nowIso = new Date().toISOString()) {
           })
           .run();
       }
+      db.update(equipmentTransfers)
+        .set({ applied: true })
+        .where(eq(equipmentTransfers.id, transfer.id))
+        .run();
     }
-    db.update(equipmentTransfers)
-      .set({ applied: true })
-      .where(eq(equipmentTransfers.id, transfer.id))
-      .run();
   }
 
   const dueJobs = db

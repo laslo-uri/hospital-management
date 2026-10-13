@@ -178,8 +178,6 @@ export async function patientBook(
 ): Promise<ActionResult> {
   try {
     const user = await requireUser(["PATIENT"]);
-    const spam = bumpPatientSpam(user.username);
-    if (spam) return spam;
     const roomRaw = String(formData.get("roomId") ?? "").trim();
     const parsed = slotSchema
       .omit({ patientUsername: true })
@@ -199,6 +197,8 @@ export async function patientBook(
       parsed.data.startsAt,
       parsed.data.endsAt,
     );
+    const spam = bumpPatientSpam(user.username);
+    if (spam) return spam;
     getDb()
       .insert(appointments)
       .values({
@@ -227,8 +227,6 @@ export async function patientCancel(
 ): Promise<ActionResult> {
   try {
     const user = await requireUser(["PATIENT"]);
-    const spam = bumpPatientSpam(user.username);
-    if (spam) return spam;
     const id = Number(formData.get("id"));
     const row = getDb()
       .select()
@@ -238,6 +236,8 @@ export async function patientCancel(
     if (!row || row.patientUsername !== user.username) {
       return { ok: false, error: "Appointment not found." };
     }
+    const spam = bumpPatientSpam(user.username);
+    if (spam) return spam;
     getDb()
       .update(appointments)
       .set({ status: "CANCELLED" })
@@ -258,8 +258,6 @@ export async function patientReschedule(
 ): Promise<ActionResult> {
   try {
     const user = await requireUser(["PATIENT"]);
-    const spam = bumpPatientSpam(user.username);
-    if (spam) return spam;
     const id = Number(formData.get("id"));
     const startsAt = toIso(String(formData.get("startsAt") ?? ""));
     const endsAt = toIso(String(formData.get("endsAt") ?? ""));
@@ -275,6 +273,8 @@ export async function patientReschedule(
       return { ok: false, error: "Appointment not found." };
     }
     conflictsForDoctor(row.doctorUsername, startsAt, endsAt, id);
+    const spam = bumpPatientSpam(user.username);
+    if (spam) return spam;
     getDb()
       .update(appointments)
       .set({
