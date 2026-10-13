@@ -359,29 +359,84 @@ public sealed class HospitalServices
         using (var cmd = Db.Connection.CreateCommand())
         {
             cmd.CommandText = """
-                SELECT id, to_room_id, item_name, quantity
+                SELECT id, from_room_id, to_room_id, item_name, quantity
                 FROM equipment_transfers
                 WHERE applied = 0 AND apply_at <= $now
                 """;
             cmd.Parameters.AddWithValue("$now", now);
             using var r = cmd.ExecuteReader();
-            var due = new List<(long Id, long To, string Name, int Qty)>();
+            var due = new List<(long Id, long From, long To, string Name, int Qty)>();
             while (r.Read())
-                due.Add((r.GetInt64(0), r.GetInt64(1), r.GetString(2), r.GetInt32(3)));
+                due.Add((r.GetInt64(0), r.GetInt64(1), r.GetInt64(2), r.GetString(3), r.GetInt32(4)));
             r.Close();
             foreach (var t in due)
             {
-                using var move = Db.Connection.CreateCommand();
-                move.CommandText = """
-                    UPDATE equipment_transfers SET applied = 1 WHERE id = $id;
-                    INSERT INTO inventory_items(room_id, name, kind, quantity)
-                    VALUES ($to, $n, 'DYNAMIC', $q);
-                    """;
-                move.Parameters.AddWithValue("$id", t.Id);
-                move.Parameters.AddWithValue("$to", t.To);
-                move.Parameters.AddWithValue("$n", t.Name);
-                move.Parameters.AddWithValue("$q", t.Qty);
-                move.ExecuteNonQuery();
+                long sourceId = 0;
+                int sourceQty = 0;
+                var kind = "DYNAMIC";
+                using (var src = Db.Connection.CreateCommand())
+                {
+                    src.CommandText = """
+                        SELECT id, quantity, kind FROM inventory_items
+                        WHERE room_id = $room AND name = $name LIMIT 1
+                        """;
+                    src.Parameters.AddWithValue("$room", t.From);
+                    src.Parameters.AddWithValue("$name", t.Name);
+                    using var srcRow = src.ExecuteReader();
+                    if (!srcRow.Read() || srcRow.GetInt32(1) < t.Qty) continue;
+                    sourceId = srcRow.GetInt64(0);
+                    sourceQty = srcRow.GetInt32(1);
+                    if (!srcRow.IsDBNull(2)) kind = srcRow.GetString(2);
+                }
+                using (var take = Db.Connection.CreateCommand())
+                {
+                    var left = sourceQty - t.Qty;
+                    take.CommandText = left <= 0
+                        ? "DELETE FROM inventory_items WHERE id = $id"
+                        : "UPDATE inventory_items SET quantity = $q WHERE id = $id";
+                    take.Parameters.AddWithValue("$id", sourceId);
+                    if (left > 0) take.Parameters.AddWithValue("$q", left);
+                    take.ExecuteNonQuery();
+                }
+                using (var dest = Db.Connection.CreateCommand())
+                {
+                    dest.CommandText = """
+                        SELECT id, quantity FROM inventory_items
+                        WHERE room_id = $room AND name = $name LIMIT 1
+                        """;
+                    dest.Parameters.AddWithValue("$room", t.To);
+                    dest.Parameters.AddWithValue("$name", t.Name);
+                    using var destRow = dest.ExecuteReader();
+                    if (destRow.Read())
+                    {
+                        var destId = destRow.GetInt64(0);
+                        var destQty = destRow.GetInt32(1);
+                        destRow.Close();
+                        using var add = Db.Connection.CreateCommand();
+                        add.CommandText = "UPDATE inventory_items SET quantity = $q WHERE id = $id";
+                        add.Parameters.AddWithValue("$q", destQty + t.Qty);
+                        add.Parameters.AddWithValue("$id", destId);
+                        add.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        destRow.Close();
+                        using var add = Db.Connection.CreateCommand();
+                        add.CommandText = """
+                            INSERT INTO inventory_items(room_id, name, kind, quantity)
+                            VALUES ($room, $name, $kind, $q)
+                            """;
+                        add.Parameters.AddWithValue("$room", t.To);
+                        add.Parameters.AddWithValue("$name", t.Name);
+                        add.Parameters.AddWithValue("$kind", kind);
+                        add.Parameters.AddWithValue("$q", t.Qty);
+                        add.ExecuteNonQuery();
+                    }
+                }
+                using var mark = Db.Connection.CreateCommand();
+                mark.CommandText = "UPDATE equipment_transfers SET applied = 1 WHERE id = $id";
+                mark.Parameters.AddWithValue("$id", t.Id);
+                mark.ExecuteNonQuery();
             }
         }
         using (var cmd = Db.Connection.CreateCommand())
@@ -396,10 +451,17 @@ public sealed class HospitalServices
             r.Close();
             foreach (var j in jobs)
             {
-                if (j.Type == "RENOVATION")
+                var status = j.Type switch
                 {
-                    using var up = Db.Connection.CreateCommand();
-                    up.CommandText = "UPDATE rooms SET status = 'RENOVATION' WHERE id = $r";
+                    "RENOVATION" => "RENOVATION",
+                    "MERGE" => "MERGED",
+                    "SPLIT" => "SPLIT",
+                    _ => "ACTIVE",
+                };
+                using (var up = Db.Connection.CreateCommand())
+                {
+                    up.CommandText = "UPDATE rooms SET status = $s WHERE id = $r";
+                    up.Parameters.AddWithValue("$s", status);
                     up.Parameters.AddWithValue("$r", j.RoomId);
                     up.ExecuteNonQuery();
                 }
